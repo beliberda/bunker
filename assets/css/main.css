@@ -1,10 +1,29 @@
 .main {
-    width: 100%;
-    height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 .main-background {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.main-title-block {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title {
+  /* font-family: "Amatic SC", cursive;  */
+  font-family: "Rubik Dirt", cursive;
+  font-size: 78px;
+  color: rgba(255, 255, 255, 0.995);
+  letter-spacing: 20px;
+  background-color: rgba(0, 0, 0, 0.396);
+  padding: 20px;
+  padding-left: 40px;
+  border-radius: 10px;
 }
