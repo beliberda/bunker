@@ -1,20 +1,20 @@
 .person {
-    display: none;
-    opacity: 0;
-    /* display: flex; */
-    flex-direction: column;
-    list-style: none;
-    gap: 20px;
-    transition: 0.5s;
+  display: none;
+  opacity: 0;
+  /* display: flex; */
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+  transition: 0.5s;
 }
 .person-item {
-    color: rgb(214, 214, 214);
-    font-size: 30px;
-    /* font-family: 'Rubik Microbe', cursive; */
-    /* font-family: "Amatic SC", cursive; */
-    /* letter-spacing: 10px; */
-    font-family: 'Rubik Mono One', sans-serif;
+  color: rgb(214, 214, 214);
+  font-size: 24px;
+  /* font-family: 'Rubik Microbe', cursive; */
+  /* font-family: "Amatic SC", cursive; */
+  /* letter-spacing: 10px; */
+  font-family: "Rubik Mono One", sans-serif;
 
-    background-color: rgba(0, 0, 0, 0.397);
-    padding: 20px;
+  background-color: rgba(0, 0, 0, 0.397);
+  padding: 20px;
 }

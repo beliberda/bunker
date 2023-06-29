@@ -1,0 +1,15 @@
+.music {
+  width: 40px;
+  border-radius: 2px;
+  background-color: rgb(87, 87, 87);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.music:active {
+  transform: scale(0.9);
+}
+.control-block {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
