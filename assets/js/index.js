@@ -49,16 +49,17 @@ createCharacter.onclick = () => {
             Generate()
         }, 100);
     }, 500);
-
-
 }
 
 let radio = document.querySelector('.music')
 let music = document.querySelector('audio')
 let control_range = document.querySelector('.range')
 let isPlay = true
+music.volume = 0.2
+control_range.value = music.volume * 100
 
 control_range.addEventListener('change', ()=>{
+    
     music.volume = control_range.value/100
     console.log(control_range.value);
 })
@@ -73,8 +74,6 @@ radio.onclick = () => {
         console.log('Запустили');
         isPlay = true
     }
-    
-
 }
 /*
 Имя

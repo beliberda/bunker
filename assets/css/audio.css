@@ -3,15 +3,18 @@
   border-radius: 2px;
   background-color: rgb(87, 87, 87);
   cursor: pointer;
+
   transition: 0.2s;
 }
 .music:active {
   transform: scale(0.9);
 }
 .control-block {
+  top: 20px;
   display: flex;
   gap: 10px;
   position: absolute;
-  top: 0;
   z-index: 100;
+  left: 20px;
+  align-items: center;
 }
