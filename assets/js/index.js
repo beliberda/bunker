@@ -59,7 +59,7 @@ music.volume = 0.2
 control_range.value = music.volume * 100
 
 control_range.addEventListener('change', ()=>{
-    
+
     music.volume = control_range.value/100
     console.log(control_range.value);
 })
@@ -75,6 +75,33 @@ radio.onclick = () => {
         isPlay = true
     }
 }
+
+
+let timeOfDay = 12
+let background = document.querySelector('.main-background')
+
+setInterval(()=>{
+    switch (timeOfDay) {
+        case 12:
+            background.src = "./assets/images/pngwing.com.png"
+            timeOfDay = 18
+            break;
+        case 18:
+            background.src = "./assets/images/radio.png"
+            break;
+        case 24:
+            background.src = "./assets/images/pngwing.com.png"
+            break;
+        case 6:
+            background.src = "./assets/images/bunker-background.jpg"
+            break;
+        default:
+            background.src = "./assets/images/bunker-background.jpg"
+            break;
+    }
+},5000)
+
+
 /*
 Имя
 Возраст
