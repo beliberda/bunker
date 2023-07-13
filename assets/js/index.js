@@ -80,26 +80,26 @@ radio.onclick = () => {
 let timeOfDay = 12
 let background = document.querySelector('.main-background')
 
-setInterval(()=>{
-    switch (timeOfDay) {
-        case 12:
-            background.src = "./assets/images/pngwing.com.png"
-            timeOfDay = 18
-            break;
-        case 18:
-            background.src = "./assets/images/radio.png"
-            break;
-        case 24:
-            background.src = "./assets/images/pngwing.com.png"
-            break;
-        case 6:
-            background.src = "./assets/images/bunker-background.jpg"
-            break;
-        default:
-            background.src = "./assets/images/bunker-background.jpg"
-            break;
-    }
-},5000)
+// setInterval(()=>{
+//     switch (timeOfDay) {
+//         case 12:
+//             background.src = "./assets/images/pngwing.com.png"
+//             timeOfDay = 18
+//             break;
+//         case 18:
+//             background.src = "./assets/images/radio.png"
+//             break;
+//         case 24:
+//             background.src = "./assets/images/pngwing.com.png"
+//             break;
+//         case 6:
+//             background.src = "./assets/images/bunker-background.jpg"
+//             break;
+//         default:
+//             background.src = "./assets/images/bunker-background.jpg"
+//             break;
+//     }
+// },5000)
 
 
 /*
