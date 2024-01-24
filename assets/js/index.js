@@ -1,6 +1,9 @@
+// подключаем массивы с данными из отдельных файлов
 import profession from "./massives/profession.js";
 import nameMass from "./massives/name.js";
+import { diseas } from "./massives/disease.js";
 
+// Создаем объект для нашего персонажа, в него будем записывать храктеристики
 let person = {
     name: null,
     age: null,
@@ -13,27 +16,43 @@ let person = {
 
 }
 
+// обращаемся к нужным элементам
 let createCharacter = document.getElementById('create-character')
 let title = document.querySelector('.main-title')
 let personEl = document.querySelector('.person')
 
-function Random(max,min) {
+function Random(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
 
 let personItems = document.querySelectorAll('.person-item')
 
 function Generate() {
-    person.name = nameMass[Math.floor(Math.random() * (nameMass.length - 1 - 0 + 1) + 0)]
-    person.age = Math.floor(Math.random() * (10 - 85 + 1) + 85)
-    person.profession = profession[Math.floor(Math.random() * (profession.length - 1 - 0 + 1) + 0)]
-    person.work_experience = Random(person.age/1.2,0)
+    person.name = nameMass[Random(0, nameMass.length)]
+    person.age = Random(10, 85)
+    if (person.age > 18) {
+        person.profession = profession[Random(0, profession.length)]
+        person.work_experience = Random(0, person.age / 1.2)
+    }
+    else {
+        person.profession = "Безработный"
+        person.work_experience = "нет"
+    }
+    let hel = Random(1, 3);
+    console.log(hel);
+    if (hel === 1) {
+        person.healthy = "Здоров"
+    }
+    else {
+        person.healthy = diseas[Random(0, diseas.length)]
+    }
 
 
-    personItems[0].innerHTML=`Имя: ${person.name}`
-    personItems[1].innerHTML=`Возраст: ${person.age}`
-    personItems[2].innerHTML=`Профессия: ${person.profession}`
-    personItems[3].innerHTML=`Стаж работы: ${person.work_experience}`
+    personItems[0].innerHTML = `Имя: ${person.name}`
+    personItems[1].innerHTML = `Возраст: ${person.age}`
+    personItems[2].innerHTML = `Профессия: ${person.profession}`
+    personItems[3].innerHTML = `Стаж работы: ${person.work_experience}`
+    personItems[4].innerHTML = `Здоровье: ${person.healthy}`
 
 
 }
@@ -54,15 +73,16 @@ createCharacter.onclick = () => {
 let radio = document.querySelector('.music')
 let music = document.querySelector('audio')
 let control_range = document.querySelector('.range')
-let isPlay = true
+let isPlay = false
 music.volume = 0.2
 control_range.value = music.volume * 100
 
-control_range.addEventListener('change', ()=>{
+control_range.addEventListener('input', () => {
 
-    music.volume = control_range.value/100
+    music.volume = control_range.value / 100
     console.log(control_range.value);
 })
+
 
 radio.onclick = () => {
     if (isPlay) {
@@ -76,30 +96,15 @@ radio.onclick = () => {
     }
 }
 
-
-let timeOfDay = 12
-let background = document.querySelector('.main-background')
-
-// setInterval(()=>{
-//     switch (timeOfDay) {
-//         case 12:
-//             background.src = "./assets/images/pngwing.com.png"
-//             timeOfDay = 18
-//             break;
-//         case 18:
-//             background.src = "./assets/images/radio.png"
-//             break;
-//         case 24:
-//             background.src = "./assets/images/pngwing.com.png"
-//             break;
-//         case 6:
-//             background.src = "./assets/images/bunker-background.jpg"
-//             break;
-//         default:
-//             background.src = "./assets/images/bunker-background.jpg"
-//             break;
-//     }
-// },5000)
+setInterval(() => {
+    if (music.duration == music.currentTime) {
+        music.currentTime = 0
+        setTimeout(() => {
+            music.play()
+            console.log("Запустили снова");
+        }, 5000)
+    }
+}, 1000);
 
 
 /*
@@ -112,3 +117,24 @@ let background = document.querySelector('.main-background')
 Плодовитость
 Что по здоровью
 */
+
+
+
+let massOkon = ["а", "и", "я", "ия", "ь"]
+let manOkon = ["ас", "ик", "иг", "ан", "ай", "ис", "аз", "ьб", "ад", "ар", "ий"]
+function checkGender(name) {
+    let isWoman = false
+    for (const okon of massOkon) {
+        if (name.includes(okon, name.length - 2)) {
+            isWoman = true
+            break
+        }
+    }
+    for (const okon of manOkon) {
+        if (name.includes(okon, name.length - 2)) {
+            isWoman = false
+            break
+        }
+    }
+    return isWoman ? "женское" : "мужское"
+}
