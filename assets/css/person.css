@@ -1,18 +1,18 @@
 .person {
+  /* Изначально блок с персонажем скрыт */
   display: none;
+  /* также делаем его */
   opacity: 0;
-  /* display: flex; */
   flex-direction: column;
   list-style: none;
   gap: 5px;
   transition: 0.5s;
 }
+
 .person-item {
   color: rgb(214, 214, 214);
   font-size: 24px;
-  /* font-family: 'Rubik Microbe', cursive; */
-  /* font-family: "Amatic SC", cursive; */
-  /* letter-spacing: 10px; */
+
   font-family: "Rubik Mono One", sans-serif;
 
   background-color: rgba(0, 0, 0, 0.397);

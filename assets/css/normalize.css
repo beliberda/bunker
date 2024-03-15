@@ -1,10 +1,27 @@
+/* подключаем шрифты по cdn через сервис google fonts P.S Можно также скачать шрифты и подключить локально*/
+
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+
+/* делаем стандратное обнуление стилей:
+убираем отступы внешние и внутренние, задаем способ вычисление ширины контейнеров с включением границ.
+*/
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* указываем, чтобы html и body растягивались на всю страницу и скрывали элементы, если они выходят за рамки сайта */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* Дальше вдаваться не обязательно, просто убираем стандартные стили браузеров */
 html,
 body,
 div,
@@ -86,13 +103,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -106,23 +122,23 @@ nav,
 section {
   display: block;
 }
-html,
-body {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
+
+
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -130,10 +146,12 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;

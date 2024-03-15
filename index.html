@@ -28,7 +28,13 @@
       content="Настольная игра в бункер, генератор персонажей для игры в бункер"
     />
     <meta name="keywords" content="Бункер, игры, настолки, веселье, " />
+
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Бункер</title>
+    <!-- скрипт обязательно подключаем с атрибутом defer, чтобы он выполнялся только после загрузки страницы -->
+    <!-- также указываем тип - модуль. Нужно для подлючения в сам скрипт других файлов js -->
+    <script defer type="module" src="./assets/js/index.js"></script>
   </head>
   <body>
     <!-- семантический тег header ставят для шапки сайта или других секций -->
@@ -46,14 +52,16 @@
       <div class="main-title-block">
         <h1 class="main-title">БУНКЕР</h1>
         <section class="person">
-          <li class="person-item person-name">Имя:</li>
-          <li class="person-item person-age">Возраст:</li>
-          <li class="person-item person-profession">Профессия</li>
-          <li class="person-item person-work_experience">Стаж работы:</li>
-          <li class="person-item person-hobby">Хобби:</li>
-          <li class="person-item person-fears">Страхи:</li>
-          <li class="person-item person-fertility">Плодовитость:</li>
-          <li class="person-item person-healthy">Здоровье:</li>
+          <ol>
+            <li class="person-item person-name">Имя:</li>
+            <li class="person-item person-age">Возраст:</li>
+            <li class="person-item person-profession">Профессия</li>
+            <li class="person-item person-work_experience">Стаж работы:</li>
+            <li class="person-item person-healthy">Здоровье:</li>
+            <li class="person-item person-fertility">Плодовитость:</li>
+            <li class="person-item person-fears">Страхи:</li>
+            <li class="person-item person-hobby">Хобби:</li>
+          </ol>
         </section>
       </div>
 
@@ -64,16 +72,11 @@
       />
     </main>
     <div class="control-block">
-      <div class="sound-range-block">
-        <input class="range" type="range" />
-      </div>
-      <img src="./assets/images/pngwing.com.png" alt="вкл/выкл" class="music" />
+      <input class="range" type="range" />
+      <button class="music">
+        <img src="./assets/images/pngwing.com.png" alt="вкл/выкл" />
+      </button>
     </div>
-    <audio
-      class="music"
-      autoplay
-      src="./assets/audio/abstractambiences7.mp3"
-    ></audio>
+    <audio class="music" src="./assets/audio/abstractambiences7.mp3"></audio>
   </body>
-  <script type="module" src="./assets/js/index.js"></script>
 </html>
