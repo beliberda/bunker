@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <!-- тег head невидим на сайте, в нем описывается информация для браузера, язык сайта, заголовок страницы, подключаемые мини-иконки
+  также сюда подключаются стили и скрипты
+  -->
   <head>
+    <!-- Какую кодировку использует сайт, по умолчанию UTF-8 -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Здесь пишем, что размер сайта зависит от девайса -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- подключаем файлик со стилями -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- название нашего сайта на разных языках -->
     <meta name="application-name" content="Мой бункер" />
     <meta name="application-name" lang="en" content="My Bunker" />
     <meta name="application-name" lang="fr" content="Mi Bunker" />
+    <!-- подключаем иконку сайта -->
     <link
       rel="shortcut icon"
       href="./assets/images/aMPwWyxM4Sc.ico"
       type="image/x-icon"
     />
+    <!--  -->
     <link rel="help" href="anton.nurgaliev@mail.ru" />
     <meta
       name="description"
@@ -22,12 +31,17 @@
     <title>Бункер</title>
   </head>
   <body>
+    <!-- семантический тег header ставят для шапки сайта или других секций -->
     <header class="header">
+      <!-- Здесь используется тег nav, обычно в нем находится навигация по сайту -->
       <nav class="nav">
+        <!-- Элемент навигации -->
         <li class="nav-item"><a href="/about.html">Как играть?</a></li>
+        <!-- Элемент навигации -->
         <li id="create-character" class="nav-item">Создать персонажа</li>
       </nav>
     </header>
+    <!-- тег main обозначает главный контент внутри страницы -->
     <main class="main">
       <div class="main-title-block">
         <h1 class="main-title">БУНКЕР</h1>
