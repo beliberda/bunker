@@ -64,19 +64,32 @@
   /* margin-top: -4px; */
   border-radius: 50%;
 }
+
+.range::-moz-range-track {
+  height: 7px;
+  background-color: rgb(36, 36, 38);
+}
+
 .range::-moz-range-track {
   height: 40px;
   background-color: rgba(110, 110, 110, 0.505);
   border-radius: 20px;
 }
+
 .range::-moz-range-thumb {
   background: #fdfdfd85;
   cursor: pointer;
-  width: 35px;
-  height: 100%;
-  -webkit-appearance: none;
-  /* margin-top: -4px; */
-  border-radius: 50%;
+  height: 7px;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+width: 35px;
+height: 100%;
+-webkit-appearance: none;
+/* margin-top: -4px; */
+border-radius: 50%;
 }
 
 @media (max-width: 768px) {
