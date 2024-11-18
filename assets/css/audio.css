@@ -83,13 +83,11 @@
   border-radius: 0px;
   padding: 0px;
   margin: 0px;
-}
-
-width: 35px;
-height: 100%;
--webkit-appearance: none;
-/* margin-top: -4px; */
-border-radius: 50%;
+  width: 35px;
+  height: 100%;
+  -webkit-appearance: none;
+  /* margin-top: -4px; */
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
